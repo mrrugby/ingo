@@ -2,10 +2,20 @@
 __pycache__/
 *.py[cod]
 *.sqlite3
+.env.*
 .env
 backend/.env
 backend/staticfiles/
 backend/media/
 frontend/node_modules/
 frontend/dist/
+
+.DS_Store
+Thumbs.db
+.pytest_cache/
+.coverage
+htmlcov/
+
+.vscode/
+.idea/
 
