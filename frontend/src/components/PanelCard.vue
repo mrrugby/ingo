@@ -1,0 +1,20 @@
+<template>
+  <section class="panel-card">
+    <div class="panel-header">
+      <div>
+        <h2>{{ title }}</h2>
+        <p v-if="description">{{ description }}</p>
+      </div>
+      <slot name="actions" />
+    </div>
+    <slot />
+  </section>
+</template>
+
+<script setup>
+defineProps({
+  title: { type: String, required: true },
+  description: { type: String, default: "" }
+});
+</script>
+
