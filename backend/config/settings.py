@@ -73,12 +73,7 @@ ASGI_APPLICATION = "config.asgi.application"
 database_url = os.getenv("DATABASE_URL")
 if database_url:
     DATABASES = {
-        "default": dj_database_url.parse(
-            database_url, 
-            conn_max_age=0, 
-            ssl_require=not DEBUG
-            )
-        }
+        "default": dj_database_url.parse(database_url, conn_max_age=60, ssl_require=not DEBUG)}
 else:
     DATABASES = {"default": {"ENGINE": "django.db.backends.sqlite3", "NAME": BASE_DIR / "db.sqlite3"}}
 
